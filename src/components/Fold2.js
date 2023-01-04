@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import Logged from './logged';
 
@@ -15,7 +15,7 @@ const Fold2 = () => {
   })
 
   const [logged, setlogged] = useState(false)
- let isSigned= localStorage.getItem('email')  // const [record, setrecord] = useState([]);
+  let isSigned = localStorage.getItem('email')  // const [record, setrecord] = useState([]);
 
   const handdleInput = (e) => {
     e.preventDefault();
@@ -23,45 +23,50 @@ const Fold2 = () => {
     const value = e.target.value;
     // console.log(name, value);
 
+    
+   
     setRegistration({ ...Registration, [name]: value });
 
-    
+
   }
 
-  useEffect(()=>{
+  useEffect(() => {
 
-    if(localStorage.getItem('email')){
+    if (localStorage.getItem('email').length) {
       setlogged(true)
     }
 
-  },[logged])
+  }, [logged])
 
-  // useEffect(() => {
-  // //  console.log("logged",logged)
-  // window.localStorage.setItem("email",JSON.stringify(Registration.email));
-  // }, [logged])
 
-  
 
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // const email= e.target.email;
-    const newRecord = { ...Registration, id: new Date().getTime().toString() }
-    setlogged(true)
-    console.log(newRecord.email)
-    localStorage.setItem('email', newRecord.email);
-    // setrecord([...record, newRecord])
-    
-    localStorage.setItem('name',newRecord.name)
-    localStorage.setItem('email',newRecord.email)
-    localStorage.setItem('password',newRecord.password)
-    localStorage.setItem('companyName',newRecord.companyName)
-    localStorage.setItem('designation',newRecord.designation)
+   if(Registration.email!=='' && Registration.password!=='' && Registration.companyName!=='' && Registration.designation!=='' && Registration.name!==''){
 
-    
-    console.log(newRecord)
+     const newRecord = { ...Registration, id: new Date().getTime().toString() }
+     setlogged(true)
+     console.log(newRecord.email)
+     localStorage.setItem('email', newRecord.email);
+     // setrecord([...record, newRecord])
+ 
+     localStorage.setItem('name', newRecord.name)
+     localStorage.setItem('email', newRecord.email)
+     localStorage.setItem('password', newRecord.password)
+     localStorage.setItem('companyName', newRecord.companyName)
+     localStorage.setItem('designation', newRecord.designation)
+     console.log(newRecord)
+   }
+   else{
+
+     alert("Fill all the fields")
+   }
+
+
+
 
     setRegistration({
       name: "",
@@ -73,7 +78,7 @@ const Fold2 = () => {
 
   }
 
-  const handleLogout=()=>{
+  const handleLogout = () => {
     localStorage.clear()
   }
 
@@ -87,16 +92,16 @@ const Fold2 = () => {
 
 
 
-    {
-      logged ? <Logged/>: ""
-    }
+      {
+        logged ? <Logged /> : ""
+      }
 
-  
-    
-      
-   
 
-        <form action='' onSubmit={handleSubmit}>
+
+
+
+
+      <form action='' onSubmit={handleSubmit}>
 
         <div className="page8_container" id="Waitinglist">
           <div className="page8_container_text">
@@ -111,7 +116,7 @@ const Fold2 = () => {
                       <div className="input_label">Name <span className="compulsory_icon">*</span>
                       </div>
                       <input type="text" className="input_style" name="name" placeholder="Ex. John Doe"
-                      required
+                        required
                         value={Registration.name}
                         onChange={handdleInput}
                         id='name'
@@ -122,7 +127,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Email <span className="compulsory_icon">*</span> </div>
                       <input type="email" className="input_style" name="email" placeholder="Ex. mail@website.com"
-                      required
+                        required
                         autoComplete='off'
                         value={Registration.email}
                         onChange={handdleInput}
@@ -134,7 +139,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Password <span className="compulsory_icon">*</span> </div>
                       <input type="password" className="input_style" name="password" placeholder="*********"
-                      required
+                        required
                         autoComplete='off'
                         value={Registration.password}
                         onChange={handdleInput}
@@ -146,7 +151,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Company Name <span className="compulsory_icon">*</span> </div>
                       <input type="text" className="input_style" name="companyName" placeholder="Ex. XYZ PVT LTD"
-                      required
+                        required
                         autoComplete='off'
                         value={Registration.companyName}
                         onChange={handdleInput}
@@ -158,7 +163,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Your title <span className="compulsory_icon">*</span> </div>
                       <input type="text" className="input_style" name="designation" placeholder="Ex. Operational Head"
-                      required
+                        required
                         autoComplete='off'
                         value={Registration.designation}
                         onChange={handdleInput}
