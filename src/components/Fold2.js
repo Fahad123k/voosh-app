@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react';
 import '../App.css';
+import Logged from './logged';
+
 
 
 const Fold2 = () => {
@@ -12,22 +14,53 @@ const Fold2 = () => {
     designation: "",
   })
 
-  // const [record, setrecord] = useState([]);
+  const [logged, setlogged] = useState(false)
+ let isSigned= localStorage.getItem('email')  // const [record, setrecord] = useState([]);
 
   const handdleInput = (e) => {
+    e.preventDefault();
     const name = e.target.name;
     const value = e.target.value;
-    console.log(name, value);
+    // console.log(name, value);
 
-    setRegistration({ ...Registration, [name]: value })
+    setRegistration({ ...Registration, [name]: value });
 
+    
   }
+
+  useEffect(()=>{
+
+    if(localStorage.getItem('email')){
+      setlogged(true)
+    }
+
+  },[logged])
+
+  // useEffect(() => {
+  // //  console.log("logged",logged)
+  // window.localStorage.setItem("email",JSON.stringify(Registration.email));
+  // }, [logged])
+
+  
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const name= e.target.name;
+    // const email= e.target.email;
     const newRecord = { ...Registration, id: new Date().getTime().toString() }
+    setlogged(true)
+    console.log(newRecord.email)
+    localStorage.setItem('email', newRecord.email);
     // setrecord([...record, newRecord])
+    
+    localStorage.setItem('name',newRecord.name)
+    localStorage.setItem('email',newRecord.email)
+    localStorage.setItem('password',newRecord.password)
+    localStorage.setItem('companyName',newRecord.companyName)
+    localStorage.setItem('designation',newRecord.designation)
+
+    
     console.log(newRecord)
 
     setRegistration({
@@ -40,11 +73,29 @@ const Fold2 = () => {
 
   }
 
+  const handleLogout=()=>{
+    localStorage.clear()
+  }
+
+
+
+
+
   return (
 
     <>
 
-      {/* <form action='' > */}
+
+
+    {
+      logged ? <Logged/>: ""
+    }
+
+  
+    
+      
+   
+
         <form action='' onSubmit={handleSubmit}>
 
         <div className="page8_container" id="Waitinglist">
