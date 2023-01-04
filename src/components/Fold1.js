@@ -26,20 +26,20 @@ function Fold1() {
             </div>
 
             <div className="arrow_img_container">
-              <img src="https://voosh.in/static/media/arrow.ff14f58c77374c33f8e8.webp" className="arrow_img" /></div>
+              <img src="https://voosh.in/static/media/arrow.ff14f58c77374c33f8e8.webp" className="arrow_img"alt='some' /></div>
 
           </div>
           <div className="my_profile_container">
-            <img src="https://voosh.in/static/media/three_lines.cb3005e94acb8877cb80.webp" className="three_lines" />
-            <img src="https://voosh.in/static/media/my_profile.61da110e7e1e80c97356.webp" className="my_profile_icon" />
+            <img src="https://voosh.in/static/media/three_lines.cb3005e94acb8877cb80.webp" className="three_lines" alt='some'/>
+            <img src="https://voosh.in/static/media/my_profile.61da110e7e1e80c97356.webp" className="my_profile_icon" alt='some' />
           </div>
           <div className="page1-outlet-container">
-            <img src="https://voosh.in/static/media/page1_1.cb1dbedcdc321b25fb4e.webp" className="page1-outlet-icon1" />
-            <img src="https://voosh.in/static/media/page1_2.4bfc2d124bbd2e50da2d.webp" className="page1-outlet-icon2" />
-            <img src="https://voosh.in/static/media/page1_3.1d108925b5e5156bb2d4.webp" className="page1-outlet-icon3" />
-            <img src="https://voosh.in/static/media/page1_4.a2a22e7f5e42a50552ae.webp" className="page1-outlet-icon4" />
-            <img src="https://voosh.in/static/media/page1_5.f505a37d3e86d1a571da.webp" className="page1-outlet-icon5" />
-            <img src="https://voosh.in/static/media/page1_6.2213ad7f35bd24758114.webp" className="page1-outlet-icon6" />
+            <img src="https://voosh.in/static/media/page1_1.cb1dbedcdc321b25fb4e.webp" className="page1-outlet-icon1" alt='some'/>
+            <img src="https://voosh.in/static/media/page1_2.4bfc2d124bbd2e50da2d.webp" className="page1-outlet-icon2" alt='some'/>
+            <img src="https://voosh.in/static/media/page1_3.1d108925b5e5156bb2d4.webp" className="page1-outlet-icon3"alt='some' />
+            <img src="https://voosh.in/static/media/page1_4.a2a22e7f5e42a50552ae.webp" className="page1-outlet-icon4"alt='some' />
+            <img src="https://voosh.in/static/media/page1_5.f505a37d3e86d1a571da.webp" className="page1-outlet-icon5"alt='some' />
+            <img src="https://voosh.in/static/media/page1_6.2213ad7f35bd24758114.webp" className="page1-outlet-icon6"alt='some' />
           </div>
         </div>
       </div>

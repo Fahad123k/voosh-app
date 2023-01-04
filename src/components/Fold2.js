@@ -15,7 +15,7 @@ const Fold2 = () => {
   })
 
   const [logged, setlogged] = useState(false)
-  let isSigned = localStorage.getItem('email')  // const [record, setrecord] = useState([]);
+  // let isSigned = localStorage.getItem('email')  // const [record, setrecord] = useState([]);
 
   const handdleInput = (e) => {
     e.preventDefault();
@@ -77,11 +77,6 @@ const Fold2 = () => {
     })
 
   }
-
-  const handleLogout = () => {
-    localStorage.clear()
-  }
-
 
 
 
@@ -180,7 +175,7 @@ const Fold2 = () => {
               </div>
             </div>
           </div>
-          <img src="https://voosh.in/static/media/book_now_bg.e9f9294653918137cd78.webp" className="waiting_list" />
+          <img src="https://voosh.in/static/media/book_now_bg.e9f9294653918137cd78.webp" className="waiting_list"  alt='some'/>
         </div>
       </form>
 
