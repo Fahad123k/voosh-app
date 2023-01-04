@@ -111,6 +111,7 @@ const Fold2 = () => {
                       <div className="input_label">Name <span className="compulsory_icon">*</span>
                       </div>
                       <input type="text" className="input_style" name="name" placeholder="Ex. John Doe"
+                      required
                         value={Registration.name}
                         onChange={handdleInput}
                         id='name'
@@ -121,6 +122,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Email <span className="compulsory_icon">*</span> </div>
                       <input type="email" className="input_style" name="email" placeholder="Ex. mail@website.com"
+                      required
                         autoComplete='off'
                         value={Registration.email}
                         onChange={handdleInput}
@@ -132,6 +134,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Password <span className="compulsory_icon">*</span> </div>
                       <input type="password" className="input_style" name="password" placeholder="*********"
+                      required
                         autoComplete='off'
                         value={Registration.password}
                         onChange={handdleInput}
@@ -143,6 +146,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Company Name <span className="compulsory_icon">*</span> </div>
                       <input type="text" className="input_style" name="companyName" placeholder="Ex. XYZ PVT LTD"
+                      required
                         autoComplete='off'
                         value={Registration.companyName}
                         onChange={handdleInput}
@@ -154,6 +158,7 @@ const Fold2 = () => {
                     <div className="input_container">
                       <div className="input_label">Your title <span className="compulsory_icon">*</span> </div>
                       <input type="text" className="input_style" name="designation" placeholder="Ex. Operational Head"
+                      required
                         autoComplete='off'
                         value={Registration.designation}
                         onChange={handdleInput}
