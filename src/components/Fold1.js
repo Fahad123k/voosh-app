@@ -19,7 +19,7 @@ function Fold1() {
 
             <div className="button_arrow_container">
               <div className="button_container_style">
-                <a href="#waitinglist" className='undefined button_container'>
+                <a href="#bookDemo" className='undefined button_container'>
                   <div><span className="text_button">Book Demo</span></div>
                 </a>
               </div>

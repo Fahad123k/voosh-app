@@ -2,6 +2,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Fold1 from './components/Fold1';
+// import Form from './components/form';
 import Fold2 from './components/Fold2';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <br />
       <br />
       <br />
+      {/* <Form /> */}
       <Fold2 />
 
 
