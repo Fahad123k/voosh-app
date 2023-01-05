@@ -32,7 +32,7 @@ const Fold2 = () => {
 
   useEffect(() => {
 
-    if (localStorage.getItem('email').length) {
+    if (localStorage.getItem('email')!=null) {
       setlogged(true)
     }
 
